@@ -4,6 +4,7 @@ from flask import Flask, render_template
 from model import Cat, connect_to_db
 import os
 
+
 app = Flask(__name__)
 
 connect_to_db(app)
@@ -12,7 +13,8 @@ connect_to_db(app)
 @app.route("/")
 def homepage():
     """Simple greeting."""
-
+    # return '<h1>Gott Here Again</h1>'      # test template render
+    
     return render_template("home.html", secret=os.environ['BEST_SPECIES'])
 
 
