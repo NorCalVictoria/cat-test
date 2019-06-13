@@ -1,8 +1,11 @@
 """Flask server for cats app."""
 
+
 from flask import Flask, render_template
 from model import Cat, connect_to_db
+import sys
 import os
+sys.path.append("/home/ubuntu/cat-test")
 
 
 app = Flask(__name__)
